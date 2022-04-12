@@ -13,11 +13,14 @@ struct AnimalRowView: View {
     
     var body: some View {
         HStack(alignment:.center, spacing:16){
-            
                         Image(animal.image)
                         .resizable()
                         //Aspect Fill
+                        //It depends on requirements
+                        //whether we want to display
+                        //full picture or not
                         .scaledToFill()
+                        //Zoomed In
                         .frame(width: 90, height: 90, alignment: .center)
                         .clipShape(
                         RoundedRectangle(cornerRadius: 12)
@@ -52,7 +55,7 @@ struct AnimalRowView_Previews: PreviewProvider {
     static var previews: some View {
         AnimalRowView(animal:animals[0])
             .previewLayout(.sizeThatFits)
-            //.padding()
+            .padding()
 
     }
 }
