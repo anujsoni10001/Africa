@@ -24,7 +24,7 @@ struct VideoPlayerView: View {
     .frame(width:32, height:32)
     .padding(.top,6)
     .padding(.horizontal,8)
-    , alignment: .topLeading
+    ,alignment: .topLeading
     )
     .accentColor(.accentColor)
     .navigationTitle(videoTitle)
