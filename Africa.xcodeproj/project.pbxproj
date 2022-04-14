@@ -31,6 +31,7 @@
 		4BB2CF0D28016329000FF9BE /* InsertLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2CF0C28016329000FF9BE /* InsertLinkView.swift */; };
 		4BCE8A0A27FD59D60022D7A2 /* CoverImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8A0927FD59D60022D7A2 /* CoverImageView.swift */; };
 		4BCE8A0F27FD63F50022D7A2 /* CoverImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8A0E27FD63F50022D7A2 /* CoverImageModel.swift */; };
+		4BD6650E2806BA9A00EF0D92 /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD6650D2806BA9A00EF0D92 /* MotionAnimationView.swift */; };
 		4BEA7D052800193400D22385 /* InsertFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEA7D042800193400D22385 /* InsertFactView.swift */; };
 		4BF9A5B827FC27D30002E70D /* rhino.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9A5AE27FC27D10002E70D /* rhino.mp4 */; };
 		4BF9A5B927FC27D30002E70D /* lioness.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9A5AF27FC27D10002E70D /* lioness.mp4 */; };
@@ -75,6 +76,7 @@
 		4BB2CF0C28016329000FF9BE /* InsertLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertLinkView.swift; sourceTree = "<group>"; };
 		4BCE8A0927FD59D60022D7A2 /* CoverImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageView.swift; sourceTree = "<group>"; };
 		4BCE8A0E27FD63F50022D7A2 /* CoverImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageModel.swift; sourceTree = "<group>"; };
+		4BD6650D2806BA9A00EF0D92 /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
 		4BEA7D042800193400D22385 /* InsertFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertFactView.swift; sourceTree = "<group>"; };
 		4BF9A5AE27FC27D10002E70D /* rhino.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rhino.mp4; sourceTree = "<group>"; };
 		4BF9A5AF27FC27D10002E70D /* lioness.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lioness.mp4; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				4B95F67A2802BA3C0045969E /* VideoListItemView.swift */,
 				4B44CC3B2802DF900044CCFA /* VideoPlayerView.swift */,
 				4B817BA7280588D800537F62 /* MapAnnotationView.swift */,
+				4BD6650D2806BA9A00EF0D92 /* MotionAnimationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				4BAAD6AA27FF074400827580 /* InsertGalleryView.swift in Sources */,
 				4B95F67B2802BA3C0045969E /* VideoListItemView.swift in Sources */,
 				4BAAD6A827FF034700827580 /* HeadingView.swift in Sources */,
+				4BD6650E2806BA9A00EF0D92 /* MotionAnimationView.swift in Sources */,
 				4BEA7D052800193400D22385 /* InsertFactView.swift in Sources */,
 				4B44CC3C2802DF900044CCFA /* VideoPlayerView.swift in Sources */,
 			);
@@ -473,6 +477,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,6 +507,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

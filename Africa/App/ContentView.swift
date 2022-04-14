@@ -26,6 +26,19 @@ struct ContentView: View {
         }
             
         }
+        .toolbar{
+        ToolbarItem(placement:.navigationBarTrailing){
+        HStack(spacing:16){
+        Button(action: {
+        print("fmrkmf")
+        }){
+        Image(systemName:"square.fill.text.grid.1x2")
+        .font(.title2)
+        .foregroundColor(.accentColor)
+        }
+        }
+        }
+        }
         .navigationTitle("Africa")
         .navigationBarTitleDisplayMode(.large)
         }
@@ -35,7 +48,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.light)
+            .preferredColorScheme(.dark)
     }
 }
 
