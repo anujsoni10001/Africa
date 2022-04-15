@@ -8,33 +8,87 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     let animals:[Animal] = Bundle.main.decode("animals.json")
+    
+    let haptics = UIImpactFeedbackGenerator(style:.medium)
 
+    @State private var isGridViewActive:Bool = false
+    
+    @State private var toolbarIcon:String = "square.grid.2x2"
+    
+    @State var gridLayout:[GridItem] = [GridItem(.flexible())]
+//    @State var gridColumn:Int = 1
+    
+    func gridSwitch(){
+        gridLayout = Array(repeating:.init(.flexible()), count: (gridLayout.count % 3) + 1 )
+        switch gridLayout.count{
+        case 1:
+        toolbarIcon = "rectangle.grid.1x2"
+        case 2:
+        toolbarIcon = "square.grid.2x2"
+        case 3:
+        toolbarIcon = "square.grid.3x2"
+        default:
+        toolbarIcon = "square.grid.2x2"
+        }
+    }
+    
     var body: some View {
         
         NavigationView{
+        
+        Group{
+        if !isGridViewActive {
         List{
         CoverImageView()
         .frame(height:300)
         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-    
-            
+                    
         ForEach(animals){item in
         NavigationLink(destination:AnimalDetailView(animal:item)){
         AnimalRowView(animal:item)
         }
         }
-            
+        }
+        }
+        else
+        {
+        ScrollView(.vertical, showsIndicators: false){
+        LazyVGrid(columns:gridLayout,alignment:.center,spacing:10){
+        ForEach(animals) { item in
+        NavigationLink(destination:AnimalDetailView(animal:item)){
+        AnimalGridItemView(animal:item)
+        }
+        }
+        }
+        .padding(10)
+        .animation(.easeIn)
+        }
+        }
         }
         .toolbar{
         ToolbarItem(placement:.navigationBarTrailing){
         HStack(spacing:16){
         Button(action: {
-        print("fmrkmf")
+        isGridViewActive = false
+        toolbarIcon = "square.grid.2x2"
+        haptics.impactOccurred()
         }){
         Image(systemName:"square.fill.text.grid.1x2")
         .font(.title2)
-        .foregroundColor(.accentColor)
+        .foregroundColor(isGridViewActive ? .primary : .accentColor)
+        }
+        
+        Button(action:{
+        print("List View is Activated")
+        isGridViewActive = true
+        haptics.impactOccurred()
+        gridSwitch()
+        }) {
+        Image(systemName:toolbarIcon)
+        .font(.title2)
+        .foregroundColor(isGridViewActive ? .accentColor : .primary)
         }
         }
         }
@@ -42,7 +96,7 @@ struct ContentView: View {
         .navigationTitle("Africa")
         .navigationBarTitleDisplayMode(.large)
         }
-    }
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -51,5 +105,7 @@ struct ContentView_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
+
+
 
 

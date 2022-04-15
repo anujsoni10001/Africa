@@ -41,7 +41,6 @@ struct VideoListView: View {
             } label: {
             Image(systemName:"arrow.2.squarepath")
             }
-
         }
         }
         }
