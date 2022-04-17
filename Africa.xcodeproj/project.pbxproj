@@ -20,7 +20,7 @@
 		4B4CF5CA27FD7709004BD8E1 /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CF5C927FD7709004BD8E1 /* CodableBundleExtension.swift */; };
 		4B52A1712802AFD300652E47 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B52A1702802AFD300652E47 /* VideoModel.swift */; };
 		4B7EF005280BD1E0007181D2 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EF004280BD1E0007181D2 /* Stickers.xcassets */; };
-		4B7EF009280BD1E0007181D2 /* Stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B7EF002280BD1DD007181D2 /* Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4B7EF009280BD1E0007181D2 /* Stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B7EF002280BD1DD007181D2 /* Stickers.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4B817BA8280588D800537F62 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B817BA7280588D800537F62 /* MapAnnotationView.swift */; };
 		4B820536280939E1007CD0E0 /* AnimalGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B820535280939E1007CD0E0 /* AnimalGridItemView.swift */; };
 		4B8FC1A3280BEBE700FD965B /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FC1A2280BEBE700FD965B /* CreditsView.swift */; };
@@ -88,6 +88,7 @@
 		4B02D4E027FC1E8700308D79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B02D4E227FC1E8800308D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B02D4E527FC1E8800308D79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4B1054E5280C03F2000A655E /* Africa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Africa.entitlements; sourceTree = "<group>"; };
 		4B44CC3B2802DF900044CCFA /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		4B44CC3E2802E1A50044CCFA /* VideoPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHelper.swift; sourceTree = "<group>"; };
 		4B4CF5C927FD7709004BD8E1 /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
@@ -161,6 +162,7 @@
 		4B02D4DD27FC1E8700308D79 /* Africa */ = {
 			isa = PBXGroup;
 			children = (
+				4B1054E5280C03F2000A655E /* Africa.entitlements */,
 				4B7C9DD827FC2C4A0007D4D3 /* Info.plist */,
 				4B8FC1A4280BF33F00FD965B /* Modifier */,
 				4B44CC3D2802E1860044CCFA /* Helper */,
@@ -438,6 +440,7 @@
 /* Begin PBXTargetDependency section */
 		4B7EF008280BD1E0007181D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 4B7EF001280BD1DD007181D2 /* Stickers */;
 			targetProxy = 4B7EF007280BD1E0007181D2 /* PBXContainerItemProxy */;
 		};
@@ -563,9 +566,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Africa/Africa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Africa/Preview Content\"";
+				DEVELOPMENT_TEAM = D49ACZH93P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Africa/Info.plist;
@@ -575,6 +580,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,6 +588,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vlsss.Africa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -593,9 +600,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Africa/Africa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Africa/Preview Content\"";
+				DEVELOPMENT_TEAM = D49ACZH93P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Africa/Info.plist;
@@ -605,6 +614,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,6 +622,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vlsss.Africa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -632,6 +643,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vlsss.Africa.Stickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -651,6 +663,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vlsss.Africa.Stickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

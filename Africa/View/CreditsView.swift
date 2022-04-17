@@ -36,3 +36,4 @@ struct CreditsView_Previews: PreviewProvider {
         .padding()
     }
 }
+
