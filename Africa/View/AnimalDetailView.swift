@@ -96,10 +96,10 @@ struct AnimalDetailView: View {
 }
 
 struct AnimalDetailedView_Previews: PreviewProvider {
-    
     static let animals:[Animal] = Bundle.main.decode("animals.json")
     
     static var previews: some View {
         AnimalDetailView(animal: animals[5])
     }
 }
+

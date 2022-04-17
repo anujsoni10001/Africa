@@ -50,6 +50,9 @@ struct ContentView: View {
         AnimalRowView(animal:item)
         }
         }
+        CreditsView()
+        .modifier(CenterModifier())
+        //.frame(maxWidth: .infinity, alignment: .center)
         }
         }
         else
